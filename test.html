@@ -1,0 +1,62 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Front end exercise about accessibility of a form using JavaScript"
+    />
+    <meta
+      name="keywords"
+      content="form, web development, accessibility, html, css, javascript"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="questionnaire">
+      <fieldset>
+        <legend>Quel est votre type de requête ?</legend>
+
+        <div class="radio-option">
+          <input
+            type="radio"
+            id="generalEnquiry"
+            name="queryType"
+            value="general"
+            tabindex="0"
+          />
+          <label for="generalEnquiry">General Enquiry</label>
+        </div>
+
+        <div class="radio-option">
+          <input
+            type="radio"
+            id="supportRequest"
+            name="queryType"
+            value="support"
+            tabindex="0"
+          />
+          <label for="supportRequest">Support Request</label>
+        </div>
+
+        <div class="radio-option">
+          <input
+            type="radio"
+            id="billingIssue"
+            name="queryType"
+            value="billing"
+            tabindex="0"
+          />
+          <label for="billingIssue">Billing Issue</label>
+        </div>
+      </fieldset>
+    </div>
+  </body>
+</html>

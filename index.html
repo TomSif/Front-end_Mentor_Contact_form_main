@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Front end exercise about accessibility of a form using JavaScript"
+    />
+    <meta
+      name="keywords"
+      content="form, web development, accessibility, html, css, javascript"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./modern-reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" defer src="./main.js"></script>
+    <script type="module" defer src="./inputValidation.js"></script>
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="layout">
+      <h1 class="layout__title">Contact Us</h1>
+      <form action="" novalidate class="form__layout">
+        <!-- First Name Section -->
+        <div class="input__section input__section--first-name">
+          <label for="firstName" class="input__label"
+            >First Name <span class="green">&nbsp*</span></label
+          >
+          <input
+            type="text"
+            name="firstname"
+            id="firstName"
+            autocomplete="given-name"
+            required
+            aria-describedby="firstNameHelp"
+            class="input__text inputNames"
+          />
+          <p id="firstNameHelp" class="input__help hidden" aria-hidden="true">
+            This field is required
+          </p>
+        </div>
+
+        <!-- Last Name Section -->
+        <div class="input__section input__section--last-name">
+          <label for="lastName" class="input__label"
+            >Last Name <span class="green">&nbsp*</span></label
+          >
+          <input
+            type="text"
+            name="lastname"
+            id="lastName"
+            autocomplete="family-name"
+            required
+            aria-describedby="lastNameHelp"
+            class="input__text inputNames"
+          />
+          <p id="lastNameHelp" class="input__help hidden" aria-hidden="true">
+            This field is required
+          </p>
+        </div>
+
+        <!-- Email Section -->
+        <div class="input__section input__section--email">
+          <label for="email" class="input__label"
+            >Email Address <span class="green">&nbsp*</span></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            required
+            aria-describedby="emailHelp"
+            class="input__text"
+          />
+          <p id="emailHelp" class="input__help hidden" aria-hidden="true">
+            This field is required
+          </p>
+        </div>
+
+        <!-- Query Type Section -->
+        <fieldset class="input__section input__section--query-type">
+          <legend class="input__label">
+            Query Type <span class="green">&nbsp*</span>
+          </legend>
+          <ul class="input__radio-group">
+            <li class="input__radio">
+              <input
+                type="radio"
+                id="generalEnquiry"
+                name="queryType"
+                value="general enquiry"
+                aria-describedby="queryTypeHelp"
+                required
+                tabindex="0"
+              />
+              <label for="generalEnquiry" class="form-control"
+                ><span>General Enquiry</span></label
+              >
+            </li>
+            <li class="input__radio">
+              <input
+                type="radio"
+                id="supportRequest"
+                name="queryType"
+                value="support request"
+                aria-describedby="queryTypeHelp"
+                required
+                tabindex="0"
+              />
+              <label for="supportRequest" class="form-control"
+                ><span>Support Request</span></label
+              >
+            </li>
+          </ul>
+          <p id="queryTypeHelp" class="input__help hidden" aria-hidden="true">
+            Please select a query type
+          </p>
+        </fieldset>
+
+        <!-- Message Section -->
+        <div class="input__section input__section--message">
+          <label for="message" class="input__label"
+            >Message <span class="green">&nbsp*</span></label
+          >
+          <textarea
+            name="message"
+            id="message"
+            required
+            aria-describedby="messageHelp"
+            class="input__textarea"
+          ></textarea>
+          <p id="messageHelp" class="input__help hidden" aria-hidden="true">
+            This field is required
+          </p>
+        </div>
+
+        <!-- Consent Section -->
+        <div class="input__section input__section--consent">
+          <div class="input__section__checkbox">
+            <input
+              type="checkbox"
+              name="consent"
+              id="consent"
+              required
+              aria-describedby="consentHelp"
+              class="input__checkbox"
+            />
+            <label for="consent" class="input__label">
+              I consent to being contacted by the team
+              <span class="green">&nbsp*</span>
+            </label>
+          </div>
+          <p id="consentHelp" class="input__help hidden" aria-hidden="true">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="input__submit">Submit</button>
+      </form>
+      <div class="success-state__container hidden">
+        <div class="success-state--title">
+          <img src="./assets/images/icon-success-check.svg" alt="" />
+          <h2>Message Sent!</h2>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+        <div class="success-state__progress-bar"></div>
+      </div>
+    </main>
+  </body>
+</html>
